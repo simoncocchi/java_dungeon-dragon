@@ -169,15 +169,15 @@ public class StartGame {
 				String philterName = sc.nextLine();
 				
 				System.out.println("Quel sera les PV de " + mageName + " ? (entre 3 et 6)");
-				int lifeCharactère = sc.nextInt();
+				int lifeCharactere = sc.nextInt();
 				sc.nextLine();
-				while (lifeCharactère < 3 || lifeCharactère > 6) {
+				while (lifeCharactere < 3 || lifeCharactere > 6) {
 					System.out.println("Les PV de " + mageName + " doivent être entre 3 et 6)");
-					lifeCharactère = sc.nextInt();
+					lifeCharactere = sc.nextInt();
 					sc.nextLine();
 				}
 				
-				Wizzard mageTest = new Wizzard(mageName, lifeCharactère, philterName); // création d'une instance de class guerrier
+				Wizzard mageTest = new Wizzard(mageName, lifeCharactere, philterName); // création d'une instance de class guerrier
 				// création de l'arme avec pour paramettre le nom et les dégats venant des paramettres 
 				mageTest.setObjectSpell(spellName, spellDammage);
 				
