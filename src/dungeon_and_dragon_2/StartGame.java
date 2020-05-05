@@ -71,13 +71,13 @@ public class StartGame {
 					
 					// Affichache et modification name
 					
-					System.out.println("Le nom du guerrier est \"" + guerrierTest.getNameWarrior() + "\". Voulez modifier ce nom ? (y/n)");
+					System.out.println("Le nom du guerrier est \"" + guerrierTest.getNameCharactere() + "\". Voulez modifier ce nom ? (y/n)");
 					String changeName = sc.nextLine();
 					if (changeName.equals("y")) {
 						System.out.println("Quel sera le nouveau nom ?");
 						String newWariorName = sc.nextLine();
-						guerrierTest.setNameWarrior(newWariorName);
-						System.out.println("Le nom a bien été modifier, le guerrier s'appelle maintenant \"" + guerrierTest.getNameWarrior() +"\"");
+						guerrierTest.setNameCharactere(newWariorName);
+						System.out.println("Le nom a bien été modifier, le guerrier s'appelle maintenant \"" + guerrierTest.getNameCharactere() +"\"");
 					}
 					
 					// Affichache et modification nom arme
@@ -122,7 +122,7 @@ public class StartGame {
 					
 					// Affichache et modification PV
 					
-					System.out.println("Le nombre de PV actuel est \"" + guerrierTest.getWarriorLife() + "\". Voulez modifier le nombre de PV ? (y/n)");
+					System.out.println("Le nombre de PV actuel est \"" + guerrierTest.getCharactereLife() + "\". Voulez modifier le nombre de PV ? (y/n)");
 					String changeWarriorPVChoice = sc.nextLine();
 					if (changeWarriorPVChoice.equals("y")) {
 						System.out.println("Quel sera le nouveau nombre de PV ? (entre 5 et 10)");
@@ -134,8 +134,8 @@ public class StartGame {
 							sc.nextLine();
 						}
 						
-						guerrierTest.setWarriorLife(newWariorPV);;
-						System.out.println("Les pV ont bien été modifié, il sont maintent de \"" + guerrierTest.getWarriorLife() +"\"");
+						guerrierTest.setCharactereLife(newWariorPV);
+						System.out.println("Les pV ont bien été modifié, il sont maintent de \"" + guerrierTest.getCharactereLife() +"\"");
 					}
 				}
 				System.out.println("Voulez-vous enregister votre guerrier ? (y/n)");

@@ -6,18 +6,25 @@ public class Warrior extends Personnage {
 	
 	
 	
-	private String warriorName;
-	//private String warriorImage; // future url de l'image
-	private int warriorLife;
+//	private String warriorName;
+//	//private String warriorImage; // future url de l'image
+//	private int warriorLife;
 	private String warriorShieldName;
 	private Weapon weaponWarrior;
 	
 	public Warrior(String warriorNameParams, int warriorLifeParams, String warriorShieldNameParams, String weaponNameParams, int weaponDammageParams) {
+		// utilisation constructeur personnage
+		super(warriorNameParams, warriorLifeParams);
+		
 		// Création du guerrier avec des paramettre dans un seul constructeur mais il est possible dans créer plusieur;
 		
-		this.warriorName = warriorNameParams;
-		this.warriorLife = warriorLifeParams;
+//		this.warriorName = warriorNameParams;
+//		this.warriorLife = warriorLifeParams;
 		this.warriorShieldName = warriorShieldNameParams; 
+		
+		// utilisation constructeur personnage
+	
+		
 		
 		// création d'une instance de weapon
 		this.weaponWarrior = new Weapon(weaponNameParams, weaponDammageParams);
@@ -28,23 +35,23 @@ public class Warrior extends Personnage {
 	
 	// Name
 	
-	public String getNameWarrior() {
-	    return warriorName;
-	  }
-	
-	public void setNameWarrior(String newName) {
-	    this.warriorName = newName;
-	  }
-	
-	// Life
-	
-	public int getWarriorLife() {
-	    return warriorLife;
-	  }
-	
-	public void setWarriorLife(int newLifePoint) {
-	    this.warriorLife = newLifePoint;
-	  }
+//	public String getNameWarrior() {
+//	    return warriorName;
+//	  }
+//	
+//	public void setNameWarrior(String newName) {
+//	    this.warriorName = newName;
+//	  }
+//	
+//	// Life
+//	
+//	public int getWarriorLife() {
+//	    return warriorLife;
+//	  }
+//	
+//	public void setWarriorLife(int newLifePoint) {
+//	    this.warriorLife = newLifePoint;
+//	  }
 	
 	// Shield 
 	
@@ -77,7 +84,7 @@ public class Warrior extends Personnage {
 	  }
 	
 	public String toString() {
-		return "name: " + this.getNameWarrior() + " - PV: " +this.getWarriorLife()+ " - Shild name: " +this.getNameShield()+ " - Weapon name: " +this.getWarriorWeaponName()+" - Weapon dammage: " + this.getWarriorWeaponDammage() + " a bien été enregisté";
+		return "name: " + this.getNameCharactere() + " - PV: " +this.getCharactereLife()+ " - Shild name: " +this.getNameShield()+ " - Weapon name: " +this.getWarriorWeaponName()+" - Weapon dammage: " + this.getWarriorWeaponDammage() + " a bien été enregisté";
 	}
 	
 }
