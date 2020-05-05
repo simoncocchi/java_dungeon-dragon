@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 import dungeon_and_dragon_2.charactere.Warrior;
 import dungeon_and_dragon_2.charactere.Wizzard;
-import dungeon_and_dragon_2.weapon.Spell;
-import dungeon_and_dragon_2.weapon.Weapon;
 
 public class StartGame {
 	
-	public StartGame() {
+	public void game(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int exit = 0;
 		
@@ -282,6 +280,12 @@ public class StartGame {
 		}
 		
 		System.out.println("fin de la création de personnage");
+		sc.close();
+		
+	}
+	
+	public StartGame() {
+
 	}
 
 }
