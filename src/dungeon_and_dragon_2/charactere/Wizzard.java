@@ -1,14 +1,9 @@
-package dungeon_and_dragon_2.charactère;
+package dungeon_and_dragon_2.charactere;
 
 import dungeon_and_dragon_2.weapon.Spell;
 import dungeon_and_dragon_2.weapon.Weapon;
 
-public class Wizzard extends Personnage {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+public class Wizzard extends Charactere {
 	
 //	private String mageName;
 //	//private String mageImage; // future url de l'image

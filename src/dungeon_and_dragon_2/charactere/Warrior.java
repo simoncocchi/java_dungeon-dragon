@@ -1,8 +1,8 @@
-package dungeon_and_dragon_2.charactère;
+package dungeon_and_dragon_2.charactere;
 
 import dungeon_and_dragon_2.weapon.Weapon;
 
-public class Warrior extends Personnage {
+public class Warrior extends Charactere {
 	
 	
 	

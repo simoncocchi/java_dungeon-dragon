@@ -1,16 +1,12 @@
-package dungeon_and_dragon_2.charactère;
+package dungeon_and_dragon_2.charactere;
 
-public class Personnage {
+public class Charactere {
 	
 	protected String charactereName;
 	protected int charactereLife;
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 	
-	public Personnage (String newCharactereName, int newCharactereLife) {
+	public Charactere (String newCharactereName, int newCharactereLife) {
 		this.charactereName = newCharactereName;
 		this.charactereLife = newCharactereLife;
 		

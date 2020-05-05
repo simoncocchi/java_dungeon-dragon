@@ -1,11 +1,6 @@
 package dungeon_and_dragon_2.weapon;
 
 public class Weapon extends SpellAndWepon {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 	
 //	private String weaponName;
 //	private int weaponDammage;

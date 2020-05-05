@@ -2,16 +2,12 @@ package dungeon_and_dragon_2;
 
 import java.util.Scanner;
 
-import dungeon_and_dragon_2.charactère.Warrior;
-import dungeon_and_dragon_2.charactère.Wizzard;
+import dungeon_and_dragon_2.charactere.Warrior;
+import dungeon_and_dragon_2.charactere.Wizzard;
 import dungeon_and_dragon_2.weapon.Spell;
 import dungeon_and_dragon_2.weapon.Weapon;
 
 public class StartGame {
-
-	public static void main(String[] args) {
-		
-	}
 	
 	public StartGame() {
 		Scanner sc = new Scanner(System.in);
