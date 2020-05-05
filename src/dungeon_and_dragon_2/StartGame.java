@@ -160,7 +160,7 @@ public class StartGame {
 				System.out.println("Quel le nom du spell de votre mage");
 				String spellName = sc.nextLine();
 				
-				System.out.println("Quel seront les dégat de votre spell" + spellName + " ? (entre 8 et 15)");
+				System.out.println("Quel seront les dégat de votre spell " + spellName + " ? (entre 8 et 15)");
 				int spellDammage = sc.nextInt();
 				sc.nextLine();
 				while (spellDammage < 8 || spellDammage > 15) {
@@ -192,13 +192,13 @@ public class StartGame {
 					
 					// Affichache et modification name
 					
-					System.out.println("Le nom du mage est \"" + mageTest.getNameWizzard() + "\". Voulez modifier ce nom ? (y/n)");
+					System.out.println("Le nom du mage est \"" + mageTest.getNameCharactere() + "\". Voulez modifier ce nom ? (y/n)");
 					String changeName = sc.nextLine();
 					if (changeName.equals("y")) {
 						System.out.println("Quel sera le nouveau nom ?");
 						String newMageName = sc.nextLine();
-						mageTest.setNameWizzard(newMageName);
-						System.out.println("Le nom a bien été modifier, le mage s'appelle maintenant \"" + mageTest.getNameWizzard() +"\"");
+						mageTest.setNameCharactere(newMageName);
+						System.out.println("Le nom a bien été modifier, le mage s'appelle maintenant \"" + mageTest.getNameCharactere() +"\"");
 					}
 					
 					// Affichache et modification nom spell
@@ -243,7 +243,7 @@ public class StartGame {
 					
 					// Affichache et modification PV
 					
-					System.out.println("Le nombre de PV actuel est \"" + mageTest.getWizzardLife() + "\". Voulez modifier le nombre de PV ? (y/n)");
+					System.out.println("Le nombre de PV actuel est \"" + mageTest.getCharactereLife() + "\". Voulez modifier le nombre de PV ? (y/n)");
 					String changeMagePVChoice = sc.nextLine();
 					if (changeMagePVChoice.equals("y")) {
 						System.out.println("Quel sera le nouveau nombre de PV ? (entre 3 et 6)");
@@ -255,8 +255,8 @@ public class StartGame {
 							sc.nextLine();
 						}
 						
-						mageTest.setWizzardLife(newMagePV);
-						System.out.println("Les pV ont bien été modifié, il sont maintent de \"" + mageTest.getWizzardLife() +"\"");
+						mageTest.setCharactereLife(newMagePV);
+						System.out.println("Les pV ont bien été modifié, il sont maintent de \"" + mageTest.getCharactereLife() +"\"");
 					}
 				}
 				System.out.println("Voulez-vous enregister votre mage ? (y/n)");
