@@ -66,21 +66,24 @@ public class Wizzard extends Personnage {
 	
 	// spell name
 	public String getSpellName() {
-		return spellMage.getSpellName();
+		return spellMage.getSpellOrWeaponName();
 	}
 	
 	public void setSpellName(String newSpellName) {
-		this.spellMage.setSpellName(newSpellName);
+		this.spellMage.setSpellOrWeaponName(newSpellName);
 	}
 	// spell dammage
 	public int getSpellDammage() {
-		return spellMage.getSpellDammage();
+		return spellMage.getSpellOrWeaponDammage();
 	}
 	
 	public void setSpellDammage(int newSpellName) {
-		this.spellMage.setSpellDammage(newSpellName);
+		this.spellMage.setSpellOrWeaponDammage(newSpellName);
 	}
 	
+	public String toString() {
+		return "name: " + this.getNameCharactere() + " - PV: " +this.getCharactereLife()+ " - Philter name: " +this.getPhilterName()+ " - Spell name: " +this.getSpellName()+" - Weapon dammage: " + this.getSpellDammage() + " a bien été enregisté";
+	}
 	
 	
 }

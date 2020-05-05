@@ -66,21 +66,21 @@ public class Warrior extends Personnage {
 	// warriorWeaponName
 	
 	public String getWarriorWeaponName() {
-	    return weaponWarrior.getWeaponName();
+	    return weaponWarrior.getSpellOrWeaponName();
 	  }
 	
 	public void setWarriorWeaponName(String newWarriorWeaponName) {
-	    this.weaponWarrior.setWeaponName(newWarriorWeaponName);
+	    this.weaponWarrior.setSpellOrWeaponName(newWarriorWeaponName);
 	  }
 	
 	// warriorWeapondammage
 	
 	public int getWarriorWeaponDammage() {
-	    return weaponWarrior.getWeaponDammage();
+	    return weaponWarrior.getSpellOrWeaponDammage();
 	  }
 	
 	public void setWarriorWeaponDammage(int newWarriorWeaponDammage) {
-	    this.weaponWarrior.setWeaponDammage(newWarriorWeaponDammage);
+	    this.weaponWarrior.setSpellOrWeaponDammage(newWarriorWeaponDammage);
 	  }
 	
 	public String toString() {

@@ -4,7 +4,7 @@ public class Personnage {
 	
 	protected String charactereName;
 	protected int charactereLife;
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -13,6 +13,7 @@ public class Personnage {
 	public Personnage (String newCharactereName, int newCharactereLife) {
 		this.charactereName = newCharactereName;
 		this.charactereLife = newCharactereLife;
+		
 	}
 	
 	//setter et getter
