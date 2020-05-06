@@ -84,7 +84,7 @@ public class Warrior extends Charactere {
 	  }
 	
 	public String toString() {
-		return "name: " + this.getNameCharactere() + " - PV: " +this.getCharactereLife()+ " - Shild name: " +this.getNameShield()+ " - Weapon name: " +this.getWarriorWeaponName()+" - Weapon dammage: " + this.getWarriorWeaponDammage() + " a bien été enregisté";
+		return "name: " + this.getNameCharactere() + " - PV: " +this.getCharactereLife()+ " - Shild name: " +this.getNameShield()+ " - Weapon name: " +this.getWarriorWeaponName()+" - Weapon dammage: " + this.getWarriorWeaponDammage();
 	}
 	
 }

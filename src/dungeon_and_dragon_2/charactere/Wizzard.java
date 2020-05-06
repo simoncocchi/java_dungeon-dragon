@@ -1,7 +1,6 @@
 package dungeon_and_dragon_2.charactere;
 
 import dungeon_and_dragon_2.weapon.Spell;
-import dungeon_and_dragon_2.weapon.Weapon;
 
 public class Wizzard extends Charactere {
 	
@@ -77,7 +76,7 @@ public class Wizzard extends Charactere {
 	}
 	
 	public String toString() {
-		return "name: " + this.getNameCharactere() + " - PV: " +this.getCharactereLife()+ " - Philter name: " +this.getPhilterName()+ " - Spell name: " +this.getSpellName()+" - Weapon dammage: " + this.getSpellDammage() + " a bien été enregisté";
+		return "name: " + this.getNameCharactere() + " - PV: " +this.getCharactereLife()+ " - Philter name: " +this.getPhilterName()+ " - Spell name: " +this.getSpellName()+" - Weapon dammage: " + this.getSpellDammage() ;
 	}
 	
 	

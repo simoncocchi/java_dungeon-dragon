@@ -1,13 +1,16 @@
 package dungeon_and_dragon_2;
 
-import java.util.Scanner;
+import java.util.InputMismatchException;
 
+import java.util.Scanner;
+import java.util.ArrayList;
 import dungeon_and_dragon_2.charactere.Warrior;
 import dungeon_and_dragon_2.charactere.Wizzard;
 
 public class StartGame {
 	
 	public void game(String[] args) {
+		ArrayList<Object> charactereList = new ArrayList<Object>();
 		Scanner sc = new Scanner(System.in);
 		int exit = 0;
 		
@@ -35,13 +38,37 @@ public class StartGame {
 				String weaponName = sc.nextLine();
 				
 				System.out.println("Quel seront les dégat de votre " + weaponName + " ? (entre 5 et 10)");
-				int weaponDammage = sc.nextInt();
-				sc.nextLine();
-				while (weaponDammage < 5 || weaponDammage > 10) {
-					System.out.println("Les dégat de " + weaponName + " doivent être entre 5 et 10)");
-					weaponDammage = sc.nextInt();
-					sc.nextLine();
-				}
+				int weaponDammage = 0;
+				boolean done = false;
+		        while (!done) {
+		            try {
+		                weaponDammage = sc.nextInt();
+		                if (weaponDammage >= 5 && weaponDammage <= 10) {
+		                    done = true;
+		                    sc.nextLine();
+		                }
+		                else {
+		                    // The input was definitely an integer and was definitely 
+		                    // not the "quit" value.  Do what you need to do with it.
+		                    System.out.println("Les dégat de " + weaponName + " doivent être entre 5 et 10)");
+		                    sc.nextLine();
+		                }
+		            }
+		            catch (InputMismatchException e) {
+		                System.out.println("\tCe n'est pas le bon type. Il faut que ce soit un chiffre.");
+		                sc.nextLine();  // Clear invalid input from scanner buffer.
+		            }
+		        }
+				
+				
+				
+//				int weaponDammage = sc.nextInt();
+//				sc.nextLine();
+//				while (weaponDammage < 5 || weaponDammage > 10) {
+//					System.out.println("Les dégat de " + weaponName + " doivent être entre 5 et 10)");
+//					weaponDammage = sc.nextInt();
+//					sc.nextLine();
+//				}
 				
 				System.out.println("Quel sera le nom de votre bouclier ?");
 				String shielName = sc.nextLine();
@@ -134,12 +161,10 @@ public class StartGame {
 				}
 				System.out.println("Voulez-vous enregister votre guerrier ? (y/n)");
 				String saveAnswer = sc.nextLine();
-				Object[] monTableauxGuerrier = new Object[10];	
-				int tableauNumnber = 0;
 				if(saveAnswer.equals("y")) {
-					monTableauxGuerrier[tableauNumnber] = guerrierTest;
-					System.out.println(monTableauxGuerrier[tableauNumnber].toString());
-					tableauNumnber++;
+					charactereList.add(guerrierTest);
+					int indexToAcess = charactereList.indexOf(guerrierTest);
+					System.out.println(charactereList.get(indexToAcess).toString());
 				}
 				
 
@@ -255,12 +280,10 @@ public class StartGame {
 				}
 				System.out.println("Voulez-vous enregister votre mage ? (y/n)");
 				String saveAnswer = sc.nextLine();
-				Object[] monTableauxMage = new Object[10];	
-				int tableauNumnber = 0;
 				if(saveAnswer.equals("y")) {
-					monTableauxMage[tableauNumnber] = mageTest;
-					System.out.println(monTableauxMage[tableauNumnber]);
-					tableauNumnber++;
+					charactereList.add(mageTest);
+					int indexToAcess = charactereList.indexOf(mageTest);
+					System.out.println(charactereList.get(indexToAcess).toString());
 				}
 				
 			} // fin else if 
@@ -275,11 +298,48 @@ public class StartGame {
 			if(createloop.equals("n")) {
 				exit = 1;
 			}
+	
+			
 		
 		//demande si veux arreter la création 
 		}
 		
 		System.out.println("fin de la création de personnage");
+		// voir la liste de arraylist
+		System.out.println("Voulez-vous voir les personnage créé ? (y/n)");
+		String seeCharactere = sc.nextLine();
+		while (!seeCharactere.equals("y") && !seeCharactere.equals("n")) {
+			System.out.println("Il est seulement possible de repondre 'y' ou 'n'");
+			seeCharactere = sc.nextLine();
+
+		}
+		if(seeCharactere.equals("y")) {
+			for (int i = 0; i < charactereList.size(); i++) {
+				  System.out.println(charactereList.get(i)+ ", ce personnage est le numeros: " + i);
+				}
+		}
+		
+		System.out.println("Voulez-vous voir modifier (m) ou suppriner (s) un des personnage de cette liste ? (or n)");
+		String modifierOrDelete = sc.nextLine();
+		while (!modifierOrDelete.equals("s") && !modifierOrDelete.equals("m") && !modifierOrDelete.equals("n")) {
+			System.out.println("Il est seulement possible de repondre 'm'(Modifier), 's'(Supprimer) ou 'n'");
+			modifierOrDelete = sc.nextLine();
+
+		}
+		if(modifierOrDelete.equals("s")) {
+			System.out.println("Qu'elle numeros de personnage voulez vous supprimer ?");
+			int charactereToModify = sc.nextInt();
+			sc.nextLine();
+			if (charactereToModify <= charactereList.size()) {
+				charactereList.remove(charactereToModify);
+				System.out.println("Le personnage a bien été Supprimer");
+			}
+			
+		} else if (modifierOrDelete.equals("s")) {
+			
+		}
+		
+			
 		sc.close();
 		
 	}
